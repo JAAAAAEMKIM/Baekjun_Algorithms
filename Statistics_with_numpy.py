@@ -2,7 +2,7 @@
 #find Average, median, mode, range of given values.
 #retrieved from https://www.acmicpc.net/problem/2108
 
-import numpy as np
+#import numpy as np     //Can do without numpy
 
 
 class Stats:
@@ -22,27 +22,26 @@ class Stats:
 
     def Mode(self):
         keys = set(self.list)
-        rows = len(keys)
-        Modearray = np.empty((rows, 2))
-        i = 0
-        for value in keys:
-            Modearray[i] = [value, self.list.count(value)]
-            i += 1
-
-        Howmany = list(Modearray[0:rows, 1])
-        Maxnum = max(Howmany)
+        modedict = dict()
+        for key in keys:
+            modedict.update({key: 0})
+        maxnum = 0
+        for value in self.list:
+            modedict[value] += 1
+            if modedict[value] > maxnum:
+                maxnum = modedict[value]
 
         temp = []
-        if Howmany.count(Maxnum) != 1:
-            for i in range(len(Howmany)):
-                if Howmany[i] == Maxnum:
-                    temp.append(Modearray[0:rows, 0][i])
-                    temp = sorted(temp)
-            return int(temp[1])
-        else:
-            idx = Howmany.index(Maxnum)
-            return Modearray[0:rows, 0][idx]
+        for item in modedict.items():
+            if item[1] == maxnum:
+                temp.append(item[0])
 
+        if len(temp) == 1:
+            return temp[0]
+        else:
+            temp.remove(min(temp))
+            return min(temp)
+        
     def Rng(self):
         return self.list[-1] - self.list[0]
 
