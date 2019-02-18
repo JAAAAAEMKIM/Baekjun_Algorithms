@@ -3,7 +3,7 @@
 # in python 3.6
 
 from sys import stdin
-import stack         # stack.py
+import stack         # Baekjun_10828_Stack.py
 
 n = int(stdin.readline())
 seq = []
