@@ -1,6 +1,6 @@
 # Baekjun 11050 Binomial Coefficient
 # retrieved from https://www.acmicpc.net/problem/11050
-# by python 3.6
+# in python 3.6
 
 
 def binomial_coef(N, K):
