@@ -1,3 +1,7 @@
+# Baekjun 10828 Stack
+# retrieved from https://www.acmicpc.net/problem/10828
+# in python 3.6
+
 
 """
 push X: 정수 X를 스택에 넣는 연산이다.
@@ -43,8 +47,8 @@ class Stack:
             return -1
 
 
-# Baekjun 10828 Stack
-"""
+# Baekjun 10828 Stack Solution
+
 N = int(input(''))
 NewStack = Stack()
 
@@ -72,6 +76,3 @@ for i in range(0, N):
     else:
         print(NewStack.empty())
         continue
-"""
-
-
