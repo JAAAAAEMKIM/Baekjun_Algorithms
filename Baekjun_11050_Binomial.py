@@ -42,5 +42,3 @@ def binomial_coef(N, K):
 N, K = map(int, input('').split(' '))
 result = binomial_coef(N, K)
 print('result is : ', result)
-
-
