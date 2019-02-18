@@ -1,6 +1,6 @@
 # Baekjun 10845 Queue
 # retrieved from https://www.acmicpc.net/problem/10845
-# in python 3.6
+# by python 3.6
 
 """
 push X: 정수 X를 큐에 넣는 연산이다.
