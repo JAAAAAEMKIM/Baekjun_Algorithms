@@ -1,4 +1,6 @@
-
+# Baekjun 1929 Counting Primes
+# retrieved from https://www.acmicpc.net/problem/1929
+# by python 3.6
 
 
 import math
