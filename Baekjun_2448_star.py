@@ -1,3 +1,8 @@
+# Baekjun 2448 별 찍기-11
+# retrieved from https://www.acmicpc.net/problem/2448
+# in python 3.6
+
+
 from math import log2
 
 def Star(n):
