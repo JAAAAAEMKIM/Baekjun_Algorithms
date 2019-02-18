@@ -1,6 +1,6 @@
 # Baekjun 1978 Get Primes
 # retrieved from https://www.acmicpc.net/problem/1978
-# by python 3.6
+# in python 3.6
 
 
 """
