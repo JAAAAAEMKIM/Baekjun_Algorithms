@@ -1,6 +1,8 @@
-#Baekjun 2108 Statistics
-#find Average, median, mode, range of given values.
-#retrieved from https://www.acmicpc.net/problem/2108
+# Baekjun 2108 Statistics
+# retrieved from https://www.acmicpc.net/problem/2108
+# in python 3.6
+
+# find Average, median, mode, range of given values.
 
 #import numpy as np     //Can do without numpy
 
