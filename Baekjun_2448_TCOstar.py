@@ -1,6 +1,6 @@
-#TCO star
-#Baekjun 2448 별 찍기-11
-# with Tail recursion by python3
+# Baekjun 2448 별 찍기-11
+# retrieved from https://www.acmicpc.net/problem/2448
+# with Tail recursion in python 3.6
 
 from math import log2
 import time
