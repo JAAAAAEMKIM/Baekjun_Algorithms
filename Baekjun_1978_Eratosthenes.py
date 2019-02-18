@@ -1,15 +1,23 @@
-#Eratosthenes
-#주어진 리스트의 사이즈에 맞는 체 생성
- ##입력 리스트의 가장 큰 값을 찾음
- ##그 값 이하인 모든 소수들을 찾음
- ##그 소수들로 구성된 리스트 만듬
+# Baekjun 1978 Get Primes
+# retrieved from https://www.acmicpc.net/problem/1978
+# by python 3.6
 
-#체에 있는 요소와 입력리스트의 값비교
 
-#겹치는 요소들의 개수를 출력
+"""
+Eratosthenes
+주어진 리스트의 사이즈에 맞는 체 생성
+ -입력 리스트의 가장 큰 값을 찾음
+ -그 값 이하인 모든 소수들을 찾음
+ -그 소수들로 구성된 리스트 만듬
+
+체에 있는 요소와 입력리스트의 값비교
+
+겹치는 요소들의 개수를 출력
+"""
+
 
 import time
-start_time = time.time()
+start_time = time.time()   #Checking start time
 
 def Eratos(N):
     #init
@@ -20,7 +28,7 @@ def Eratos(N):
         Initial_list.append(i)
         Sieve.append('W')
 
-    #Sieving
+    #Sieving by coloring
     for i in range (2, N + 1):
         key = i
         for j in range(2, N + 1):
