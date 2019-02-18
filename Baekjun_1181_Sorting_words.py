@@ -1,6 +1,6 @@
 #Baekjun 1181 Sorting Words
 #retrieved from https://www.acmicpc.net/problem/1181
-#by python 3.6
+#in python 3.6
 
 #define a function combining words with length
 def makeLenDict(Lst):
