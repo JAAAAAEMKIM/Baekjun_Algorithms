@@ -1,3 +1,10 @@
+/*
+ * Baekjun 10799 Iron Bar solved by stack
+ * retrieved from https://www.acmicpc.net/problem/10799
+ * in C++ 14
+ */
+
+
 #include <bits/stdc++.h>
 
 using namespace std;
