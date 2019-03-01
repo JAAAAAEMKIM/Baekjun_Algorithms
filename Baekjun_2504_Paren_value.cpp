@@ -5,11 +5,8 @@
  */
  
  
- 
 #include <bits/stdc++.h>
-
 using namespace std;
-
 
 // def paren-completeness-check function
 
@@ -134,7 +131,7 @@ int value_(string s, int rec)   // rec: checking recursion depth
 } 
 // End of function def.
 
-
+// Main
 int main()
 {
     ios::sync_with_stdio(0);
