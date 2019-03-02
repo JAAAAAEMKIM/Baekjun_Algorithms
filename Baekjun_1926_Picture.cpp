@@ -3,6 +3,7 @@
  * retrieved from https://www.acmicpc.net/problem/1926
  * in C++ 14
  * referred to <https://blog.encrypted.gg/729?category=773649> for practice
+ * ! NOT MY ORIGINAL CODE !
  */
 
 #include <bits/stdc++.h>
@@ -31,7 +32,6 @@ int main()
         for(int j=0; j<m; j++)  // y axis, m times
         {
             cin >>board[i][j];  // Input values to the board in a given order
-
         }
     }
     int Max = 0;        // Max size of a picture
