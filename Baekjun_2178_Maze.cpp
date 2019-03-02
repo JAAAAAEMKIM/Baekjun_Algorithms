@@ -10,7 +10,7 @@ using namespace std;
 
 int maze[102][102];
 int vis[102][102];
-int dist[102][102];
+int dist[102][102];    // Matrix recording distance
 
 int dx[4] = {1, 0, -1, 0};
 int dy[4] = {0, 1, 0, -1};
@@ -34,17 +34,6 @@ int main()
             maze[i][j] = stoi(subrow);
         }
     }
-    // check maze input
-    for(int i=0; i<N; i++){
-        for(int j=0; j<M; j++){
-                cout<<maze[i][j]<<' ';
-        }
-        cout<<'\n';
-    }
-
-    //preparation
-    int depth = 0;
-    int nx, ny;
 
     //operation
     for(int i=0; i<N; i++){
@@ -54,7 +43,7 @@ int main()
             // Found!
             else{
                 vis[i][j] = 1;
-                dist[i][j] = ++depth;
+                dist[i][j] = 1;     
                 Q.push({i,j});
 
                 // Start BFS
@@ -65,8 +54,8 @@ int main()
                     Q.pop();
 
                     for(int dir = 0; dir<4; dir++){
-                        nx = cur.first + dx[dir];
-                        ny = cur.second + dy[dir];
+                        int nx = cur.first + dx[dir];
+                        intny = cur.second + dy[dir];
 
                         if(nx <0 or nx >=N or ny <0 or ny >=M)
                             continue;
@@ -78,7 +67,7 @@ int main()
                         }
                     };   // end of for loop
                 }       // end of while loop
-                        //end of BFS
+                        //end of BFS ==> Further search is not needed cuz maze is fully connected.
                 endflag = 1;
                 break;
             }
