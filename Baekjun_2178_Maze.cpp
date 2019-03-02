@@ -47,7 +47,6 @@ int main()
                 Q.push({i,j});
 
                 // Start BFS
-                int w = 0;
                 while(!Q.empty())
                 {
                     auto cur = Q.front();
@@ -55,7 +54,7 @@ int main()
 
                     for(int dir = 0; dir<4; dir++){
                         int nx = cur.first + dx[dir];
-                        intny = cur.second + dy[dir];
+                        int ny = cur.second + dy[dir];
 
                         if(nx <0 or nx >=N or ny <0 or ny >=M)
                             continue;
@@ -65,7 +64,7 @@ int main()
                             dist[nx][ny] = dist[cur.first][cur.second] +1;
                             vis[nx][ny] = 1;
                         }
-                    };   // end of for loop
+                    }   // end of for loop
                 }       // end of while loop
                         //end of BFS ==> Further search is not needed cuz maze is fully connected.
                 endflag = 1;
