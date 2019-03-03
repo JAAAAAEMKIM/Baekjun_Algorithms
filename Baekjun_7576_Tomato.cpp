@@ -16,7 +16,8 @@ int main()
     cin.tie(0);
     //setting
 
-    int M, N, result=0; // M: x-axis: j ; N: y-axis: i
+    // Init
+    int M, N, result=0; // (M: x-axis: j) ; (N: y-axis: i)
     int zero_counter = 0;
     cin >>M >>N;
     int box[N][M];
@@ -34,59 +35,32 @@ int main()
                 vis[i][j] =1;
             }
             else if(box[i][j] == 0)
-                zero_counter++;
+                zero_counter++;         //check the number of the immatures
         }
-
-    }
-
-    for(int i = 0; i< N; i++){
-        for(int j=0; j<M; j++)
-            cout<<box[i][j]<<' ';
-        cout<<'\n';
     }
 
     //BFS operation
     while(!Q.empty()){
-        auto cur = Q.front();
+        auto cur = Q.front();       //current coordinate
         Q.pop();
 
         for(int dir=0; dir<4; dir++){
             int nx = cur.first + dx[dir];
             int ny = cur.second + dy[dir];
 
-            if(nx<0 or nx >=M or ny<0 or ny>=N) continue;
-            if(vis[ny][nx] or box[ny][nx] == -1) continue;
+            if(nx<0 or nx >=M or ny<0 or ny>=N) continue;       // out of range
+            if(vis[ny][nx] or box[ny][nx] == -1) continue;      // already visited or Not a tomato
 
-            vis[ny][nx] = 1;
-            dist[ny][nx] = dist[cur.second][cur.first] + 1;
+            vis[ny][nx] = 1;                                    // mark as visited
+            dist[ny][nx] = dist[cur.second][cur.first] + 1;     // mark distance
             Q.push({nx,ny});
-            zero_counter--;
+            zero_counter--;                                     // How many immature tomatoes left
             result = max(dist[ny][nx], result);
         }
     }
-    if(!zero_counter)
-        cout<<'\n'<<"result is: "<<result<<'\n';
+    if(!zero_counter)                               // if there's no zero
+        cout<<'\n'<<"result is: "<<result<<'\n';    // = Available sample
     else
-        cout << '\n'<<"result is: "<<-1<<'\n';
-
-    for(int i = 0; i< N; i++){
-        for(int j=0; j<M; j++)
-            cout<<dist[i][j]<<' ';
-        cout<<'\n';
-    }
-
-    for(int i = 0; i< N; i++){
-        for(int j=0; j<M; j++)
-            cout<<vis[i][j]<<' ';
-        cout<<'\n';
-    }
-
-    /*
-    for(int i = 0; i< N; i++){
-        for(int j=0; j<M; j++){
-            if(box[i][j]==1)
-        }
-    }*/
-
+        cout << '\n'<<"result is: "<<-1<<'\n';      // print -1 if unavailable
     return 0;
 }
