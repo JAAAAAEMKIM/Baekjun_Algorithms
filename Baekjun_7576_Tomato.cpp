@@ -21,18 +21,16 @@ int main()
     int zero_counter = 0;
     cin >>M >>N;
     int box[N][M];
-    int vis[N][M];
     int dist[N][M];
     queue<pair<int,int>> Q;
 
     for(int i=0; i<N; i++){
         for(int j=0; j<M; j++){
             cin >> box[i][j];
-            vis[i][j] = 0;
-            dist[i][j] = 0;
+            dist[i][j] = -1;
             if(box[i][j] == 1){
                 Q.push({j,i});
-                vis[i][j] =1;
+                dist[i][j] =0;
             }
             else if(box[i][j] == 0)
                 zero_counter++;         //check the number of the immatures
@@ -49,9 +47,8 @@ int main()
             int ny = cur.second + dy[dir];
 
             if(nx<0 or nx >=M or ny<0 or ny>=N) continue;       // out of range
-            if(vis[ny][nx] or box[ny][nx] == -1) continue;      // already visited or Not a tomato
-
-            vis[ny][nx] = 1;                                    // mark as visited
+            if(dist[ny][nx]!=-1 or box[ny][nx] == -1) continue;      // already visited or Not a tomato
+            
             dist[ny][nx] = dist[cur.second][cur.first] + 1;     // mark distance
             Q.push({nx,ny});
             zero_counter--;                                     // How many immature tomatoes left
