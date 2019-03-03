@@ -7,7 +7,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int dist[2000000] = {0};
+int dist[2000000] = {0};            //distance array
 
 int main()
 {
@@ -15,6 +15,7 @@ int main()
     cin.tie(0);
     //setting
 
+    //input
     int N, K, num=0;
     cin >>N >> K;
 
@@ -24,6 +25,7 @@ int main()
     }
 
     else{
+        //BFS preparation
         queue<int> Q;
         Q.push(N);
         dist[N] = 0;
@@ -31,14 +33,16 @@ int main()
         
         while(!Q.empty())
         {
-
             key = Q.front();
             Q.pop();
-
+            
+            //Target condition
             if(key == K){
                 cout << dist[key];
                 break;
             }
+            
+            //operation for the three options
             int next[3] = {key -1, key+1, 2*key};
             for(auto s: next)
             {
@@ -46,8 +50,8 @@ int main()
                     dist[s] = dist[key]+1;
                     Q.push(s);
                 }
-            }
-        }
+            }// end of for
+        }// end of BFS
     }
     return 0;
 }
