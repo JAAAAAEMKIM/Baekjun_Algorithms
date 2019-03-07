@@ -1,3 +1,11 @@
+/*
+ * Baekjun 1074 Z solved by recursion
+ * retrieved from https://www.acmicpc.net/problem/2178
+ * in C++ 14
+ * FAILED
+ */
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
