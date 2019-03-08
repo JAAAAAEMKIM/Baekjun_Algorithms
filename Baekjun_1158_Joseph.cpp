@@ -7,7 +7,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-///with Queue
+//with Queue
 int main(){
     ios::sync_with_stdio(0);
     cin.tie(0);
@@ -41,7 +41,8 @@ int main(){
 
     return 0;
 }
-///with List
+
+/**with List
 int main(){
     ios::sync_with_stdio(0);
     cin.tie(0);
@@ -77,4 +78,4 @@ int main(){
     }
     return 0;
 }
-///
+**/
