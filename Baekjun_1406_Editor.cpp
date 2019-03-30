@@ -1,3 +1,11 @@
+/*
+ * Baekjun 1406 Editor solved by List
+ * retrieved from https://www.acmicpc.net/problem/1406
+ * in C++ 14
+ */
+
+
+
 #include <bits/stdc++.h>
 
 using namespace std;
