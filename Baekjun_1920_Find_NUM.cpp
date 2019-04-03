@@ -1,3 +1,10 @@
+/*
+ * Baekjun 1920 Find Num
+ * retrieved from https://www.acmicpc.net/problem/1920
+ * in C++ 14
+ */
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
