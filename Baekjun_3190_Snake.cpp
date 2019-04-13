@@ -1,3 +1,9 @@
+/*
+ * Baekjun 3190 snake
+ * retrieved from https://www.acmicpc.net/problem/3190
+ * in C++ 14
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
 
