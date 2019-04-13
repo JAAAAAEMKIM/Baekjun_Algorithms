@@ -1,4 +1,8 @@
-/// N BISHOP
+/*
+ * Baekjun 10026 RG blind
+ * retrieved from https://www.acmicpc.net/problem/10026
+ * in C++ 14
+ */
 
 #include <bits/stdc++.h>
 using namespace std;
