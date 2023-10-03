@@ -1,4 +1,5 @@
 # Baekjun_Algorithms
-Making my own solutions for "Baekjun Online Judge"
 
-Problems are retrieved from https://www.acmicpc.net/
+백준 알고리즘 문제 풀이 연습
+
+https://www.acmicpc.net/
